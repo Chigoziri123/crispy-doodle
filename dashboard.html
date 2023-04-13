@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+  
+    <header id = "dashBoard">
+        <!--This is for the Navigation Menu-->
+        <nav class= "flex bg-black">
+           <div class="mt-4">
+                <img src="./assets/Hotel logo_200x200.png" alt="" height="100px" width="120px">
+           </div>
+
+            <div class="flex w-2/5 ml-20">
+                <p class="text-white mt-10 font-light text-4xl"> Welcome.</p>
+                <p id="initials" class="border-2 border-solid text-center text-white bg-black rounded-full p-5 px-16 m-6"></p>
+            </div>
+           
+            <!--Button to add rooms, select number of days and make payment-->
+            <div>
+                <button id="addRoom" class=" flex w-2/5 ml-80 mt-12 pl-10 py-2 border-solid border-2 text-white font-light rounded-md">Add Room</button>
+            </div>
+        </nav>
+
+        <!--Banner Section-->
+        <div class="flex container relative w-full h-full">
+            <!--Aside Menu-->
+            <aside class="absolute font-light text-2xl font-light text-gray-100 w-1/3">
+                <ul class="mt-28">
+                    <li><button id="detailsRoom" class="pl-3 pr-72 py-3 m-2 underline ">Rooms</button></li>
+                    <li><button id="bookedRooms" class="pl-3 pr-48 py-3 m-2 underline ">Available Rooms</button></li>
+                    <li><button id = "availRooms" class="pl-3 pr-48 py-3 rounded m-2 underline">Booked Rooms</button></li>
+                    <li><button class="pl-3 pr-72 py-3 rounded m-2 underline">Charts</button></li>
+                </ul>
+            </aside>
+            <!-- Search Bar -->
+            <div class="flex absolute w-full bg-yellow-800 h-20">
+                <form class="w-1/3" action="">
+                    <input class= "border-solid mt-4 ml-2 p-2 rounded-md" type="text" placeholder="Search here..." name="search">
+                </form> 
+            <!--Display of Total rooms, Available Rooms and Booked Rooms-->
+                <div class="flex w-2/3 justify-evenly">
+                    <div class="text-2xl text-white font-light">
+                        <p>Total Rooms</p>
+                        <p class="text-center border-solid rounded-full px-6 bg-gray-400 mt-2 mx-12">8</p>
+                    </div>
+                    <div class="text-2xl text-white font-light">
+                        <p>Booked Rooms</p>
+                        <p class="text-center border-solid rounded-full bg-green-600 mt-2 mx-12">4</p>
+                    </div>
+                    
+                    <div class="text-2xl text-white font-light">
+                        <p>Available Rooms</p>
+                        <p class="text-center border-solid rounded-full bg-yellow-600 mt-2 mx-12">4</p>
+                    </div>
+                </div>
+            </div>
+            <!--Background Photo-->
+            <div>
+                <picture>
+                    <img src="assets/Hotel lobby.png" alt="">
+                </picture>
+                
+                <!-- Display for rooms and their details -->
+                <div id="disPlay" class="">
+
+                </div>
+            </div>
+        </div>
+            
+    </header>
+
+
+    <script src="/dashboard.js"></script>
+</body>
+</html>
